@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button
+      mat-icon-button
+      (click)="sidenav.toggle()"
+      fxShow="true"
+      fxHide.gt-sm>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>
+      <a>Online.Af</a>
+    </span>
+    <div class="my-margins" fxShow="true" fxHide.lt-md>
+      <a mat-button class="my-margins"><mat-icon>fastfood</mat-icon> Food</a>
+      <a mat-button class="my-margins"><mat-icon>local_mall</mat-icon> Store</a>
+      <a mat-button class="my-margins"><mat-icon>medical_services</mat-icon> Pharmacy</a>
+      <a mat-button class="my-margins"><mat-icon>laptop</mat-icon> Electronics</a>
+    </div>
+    <span class="spacer"></span>
+    <div fxShow="true" fxHide.lt-md>
+      <a mat-button><mat-icon>local_grocery_store</mat-icon></a>
+      <a mat-button><mat-icon>account_circle</mat-icon></a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container fxFlexFill>
+  <mat-sidenav #sidenav>
+    <a mat-button href="" mat-list-item><mat-icon>fastfood</mat-icon></a>
+  </mat-sidenav>
+  <mat-sidenav-content fxFlexFill>
+    Main Content
+  </mat-sidenav-content>
+</mat-sidenav-container>
