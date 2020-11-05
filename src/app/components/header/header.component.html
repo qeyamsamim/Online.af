@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>
+      <a routerLink="">Online.Af</a>
+    </span>
+    <div class="my-margins" fxShow="true" fxHide.lt-md>
+      <a mat-button class="my-margins" routerLink="/food"><mat-icon>fastfood</mat-icon> Food</a>
+      <a mat-button class="my-margins" routerLink="/store"><mat-icon>local_mall</mat-icon> Store</a>
+      <a mat-button class="my-margins" routerLink="/pharmacy"><mat-icon>medical_services</mat-icon> Pharmacy</a>
+      <a mat-button class="my-margins" routerLink="/electronics"><mat-icon>laptop</mat-icon> Electronics</a>
+    </div>
+    <span class="spacer"></span>
+    <div fxShow="true">
+      <a mat-button routerLink="/cart"><mat-icon>local_grocery_store</mat-icon></a>
+      <a mat-button routerLink="/profile"><mat-icon>account_circle</mat-icon></a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

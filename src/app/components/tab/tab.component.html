@@ -1,0 +1,26 @@
+<mat-tab-group mat-align-tabs="center" fxShow="true" fxHide.gt-sm>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <a routerLink="/food"><mat-icon>fastfood</mat-icon></a>
+    </ng-template>
+    <app-food></app-food>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <a routerLink="/store"><mat-icon>local_mall</mat-icon></a>
+    </ng-template>
+    <app-store></app-store>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <a routerLink="/pharmacy"><mat-icon>medical_services</mat-icon></a>
+    </ng-template>
+    <app-pharmacy></app-pharmacy>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <a routerLink="/electronics"><mat-icon>laptop</mat-icon></a>
+    </ng-template>
+    <app-electronics></app-electronics>
+  </mat-tab>
+</mat-tab-group>
