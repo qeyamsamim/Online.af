@@ -1,5 +1,6 @@
-<app-header></app-header>
-<app-tab></app-tab>
-<main>
+<div class="container">
+  <app-header></app-header>
+  <app-tab></app-tab>
   <router-outlet></router-outlet>
-</main>
+  <app-cart fxShow="true" fxHide.lt-md></app-cart>
+</div>

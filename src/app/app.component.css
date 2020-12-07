@@ -1,0 +1,20 @@
+.container {
+  display: grid;
+  grid-template-columns: 74.2% 25%;
+  grid-gap: 10px;
+  grid-template-areas:
+  "header header"
+  "content cart";
+}
+
+app-header {
+  grid-area: header;
+}
+
+app-main {
+  grid-area: content;
+}
+
+app-card {
+  grid-area: cart;
+}
