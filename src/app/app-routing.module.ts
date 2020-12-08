@@ -8,6 +8,7 @@ import { StoreComponent } from './components/store/store.component';
 import { PharmacyComponent } from './components/pharmacy/pharmacy.component';
 import { ElectronicsComponent } from './components/electronics/electronics.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { PostingComponent } from './admin/components/posting/posting.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'store', component: StoreComponent },
   { path: 'pharmacy', component: PharmacyComponent },
   { path: 'electronics', component: ElectronicsComponent },
-  { path: 'profile', component: ProfileComponent }
+  { path: 'profile', component: ProfileComponent },
+  { path: 'admin', component: PostingComponent }
 ];
 
 @NgModule({

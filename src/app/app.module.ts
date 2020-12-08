@@ -24,10 +24,18 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatInputModule } from '@angular/material/input';
 
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { FormsModule } from '@angular/forms';
+import { PostingComponent } from './admin/components/posting/posting.component';
+import { RestaurantsComponent } from './admin/components/restaurants/restaurants.component';
+import { FoodPostingComponent } from './admin/components/food-posting/food-posting.component';
+import { ElectronicsPostingComponent } from './admin/components/electronics-posting/electronics-posting.component';
+import { PharmacyPostingComponent } from './admin/components/pharmacy-posting/pharmacy-posting.component';
+import { FlowerPostingComponent } from './admin/components/flower-posting/flower-posting.component';
+import { StorePostingComponent } from './admin/components/store-posting/store-posting.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +48,14 @@ import { FormsModule } from '@angular/forms';
     StoreComponent,
     PharmacyComponent,
     ElectronicsComponent,
-    ProfileComponent
+    ProfileComponent,
+    PostingComponent,
+    RestaurantsComponent,
+    FoodPostingComponent,
+    ElectronicsPostingComponent,
+    PharmacyPostingComponent,
+    FlowerPostingComponent,
+    StorePostingComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +73,8 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatSelectModule,
     MatGridListModule,
-    MatCarouselModule
+    MatCarouselModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

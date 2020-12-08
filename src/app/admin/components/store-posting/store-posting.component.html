@@ -1,0 +1,29 @@
+<mat-card>
+  <h3>Post Store</h3>
+  <form (submit)="onAddStore(storeForm)" #storeForm="ngForm">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput type="text" name="name" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Delivery Price</mat-label>
+      <input matInput type="text" name="deliveryPrice" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Working Hours</mat-label>
+      <input matInput type="text" name="hours" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Address</mat-label>
+      <input matInput type="text" name="address" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Contact</mat-label>
+      <input matInput type="tel" name="contact" ngModel required minlength="10" maxlength="10">
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      submit>Post</button>
+  </form>
+</mat-card>
