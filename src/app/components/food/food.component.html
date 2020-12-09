@@ -1,1 +1,7 @@
-<p>food works!</p>
+<mat-card *ngFor="let restaurant of restaurants">
+  <p>{{ restaurant.name }}</p>
+  <p>{{ restaurant.deliveryPrice }}</p>
+  <p>{{ restaurant.hours }}</p>
+  <p>{{ restaurant.address }}</p>
+  <p>{{ restaurant.contact }}</p>
+</mat-card>

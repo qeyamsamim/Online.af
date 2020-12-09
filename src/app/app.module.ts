@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +16,13 @@ import { StoreComponent } from './components/store/store.component';
 import { PharmacyComponent } from './components/pharmacy/pharmacy.component';
 import { ElectronicsComponent } from './components/electronics/electronics.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { PostingComponent } from './admin/components/posting/posting.component';
+import { RestaurantsComponent } from './admin/components/restaurants/restaurants.component';
+import { FoodPostingComponent } from './admin/components/food-posting/food-posting.component';
+import { ElectronicsPostingComponent } from './admin/components/electronics-posting/electronics-posting.component';
+import { PharmacyPostingComponent } from './admin/components/pharmacy-posting/pharmacy-posting.component';
+import { FlowerPostingComponent } from './admin/components/flower-posting/flower-posting.component';
+import { StorePostingComponent } from './admin/components/store-posting/store-posting.component';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -25,17 +34,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
-
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+
 import { NgImageSliderModule } from 'ng-image-slider';
-import { FormsModule } from '@angular/forms';
-import { PostingComponent } from './admin/components/posting/posting.component';
-import { RestaurantsComponent } from './admin/components/restaurants/restaurants.component';
-import { FoodPostingComponent } from './admin/components/food-posting/food-posting.component';
-import { ElectronicsPostingComponent } from './admin/components/electronics-posting/electronics-posting.component';
-import { PharmacyPostingComponent } from './admin/components/pharmacy-posting/pharmacy-posting.component';
-import { FlowerPostingComponent } from './admin/components/flower-posting/flower-posting.component';
-import { StorePostingComponent } from './admin/components/store-posting/store-posting.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { StorePostingComponent } from './admin/components/store-posting/store-po
     MatSelectModule,
     MatGridListModule,
     MatCarouselModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

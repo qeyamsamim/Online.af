@@ -30,7 +30,7 @@ export class RestaurantsComponent implements OnInit {
       form.value.deliveryPrice,
       form.value.hours,
       form.value.address,
-      form.value.contact
-    );
+      form.value.contact);
+    form.resetForm();
   }
 }
