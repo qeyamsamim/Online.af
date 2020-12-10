@@ -1,7 +1,25 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+
+const Restaurant = require('./models/restaurant');
 
 const app = express();
+
+const conString = 'mongodb://localhost:27017/onlineAf';
+
+mongoose.connect(conString, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
+})
+  .then(() => {
+    console.log('Connected to database!');
+  })
+  .catch(() => {
+    console.log('Connection failed!');
+  })
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -20,35 +38,39 @@ app.use((req, res, next) => {
 });
 
 app.post("/api/restaurants", (req, res, next) => {
-  const restaurant = req.body;
-  console.log(restaurant);
-  res.status(201).json({
-    message: 'Restaurant added successfully!'
+  const restaurant = new Restaurant({
+    name: req.body.name,
+    deliveryPrice: req.body.deliveryPrice,
+    hours: req.body.hours,
+    address: req.body.address,
+    contact: req.body.contact
+  });
+  restaurant.save().then(createdRestaurant => {
+    res.status(201).json({
+      message: 'Restaurant added successfully!',
+      restaurantId: createdRestaurant._id
+    });
   });
 });
 
 app.get("/api/restaurants", (req, res, next) => {
-  const restaurants = [
-    {
-      id: "kddkfjow12",
-      name: "Maiwand",
-      deliveryPrice: "100",
-      hours: "2-4",
-      address: "Pole Sorkh",
-      contact: "0788121314"
-    },
-    {
-      id: "kdwrajow12",
-      name: "Tea Talk",
-      deliveryPrice: "100",
-      hours: "2-6",
-      address: "Charahi Pole Sorkh",
-      contact: "0777112233"
-    }
-  ]
-  return res.status(200).json({
-    message: "Restaurants fetched successfully!",
-    restaurants: restaurants
+  Restaurant.find().then(documents => {
+    res.status(200).json({
+      message: 'Restaurants fetched successfully!',
+      restaurants: documents
+    });
+  });
+});
+
+// This route deletes restaurants from DB.
+app.delete("/api/restaurants/:id", (req, res, next) => {
+  Restaurant.deleteOne({
+    _id: req.params.id
+  }).then(result => {
+    console.log(result);
+    res.status(200).json({
+      message: 'Restaurant Deleted!'
+    });
   });
 });
 

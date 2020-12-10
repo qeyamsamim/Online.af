@@ -33,4 +33,10 @@ export class RestaurantsComponent implements OnInit {
       form.value.contact);
     form.resetForm();
   }
+
+  // This function deletes a single restaurant.
+  // tslint:disable-next-line: typedef
+  onDelete(restaurantId: string) {
+    this.restaurantService.deleteRestaurant(restaurantId);
+  }
 }
