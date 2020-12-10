@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
 
+## Introduction
+
+OnlineAf is a MEAN stack application which uses Angular for frontend, Nodejs and Express for backend, and MongoDB for handling data. This web application allows users to order food from different restaurants, a variety of products from different stores, electronic devices from the best shops in the region, and any kind of medicine from pharmacies. Online payment is not available at the moment, but might be added in the future.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
